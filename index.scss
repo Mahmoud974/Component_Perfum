@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:ital,wght@0,200;0,300;0,700;1,500&display=swap');
+//Color Primary
+$DarkCyan: hsl(158, 36%, 37%);
+$Cream: hsl(30, 38%, 92%);
+
+//Color Neutral
+$VeryDarkBlue: hsl(212, 21%, 14%);
+$DarkGrayishBlue: hsl(228, 12%, 48%);
+$White: hsl(0, 0%, 100%);
+body{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 100vh;
+    background: $Cream;
+}
+.flexbox_card{
+       display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+}
+
+.card{
+    padding-bottom: 40px;
+    margin: 10px;
+    small{
+       padding-top: 10px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 100;
+       white-space: 10px;
+       text-decoration: line-through;
+    }
+    h1{
+        margin: 10px 0 ;
+        font-family: 'Fraunces', serif;
+        font-size: 34px;
+    }
+    background: $White;
+    border-radius: 30px;
+  .img_mobile{
+   width:100%;
+   border-radius: 20px 20px 0 0;
+  }
+  .img_desktop{
+    display: none;
+  }
+  .bloc_text{
+    margin-left: 20px;
+    .perfume_small{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        font-size: 12px;
+        letter-spacing: 5px;
+       
+        
+       }
+p{
+    font-family: 'Montserrat', sans-serif;
+    color:$DarkGrayishBlue; 
+    font-size: 15px;
+    font-weight: 300;
+    margin-top: 10px;
+    margin-bottom: 0;
+        
+
+  }
+  .price{
+   @extend .flexbox_card;
+    font-family: 'Fraunces', serif;
+    margin-top: -20px;
+    h2{
+        margin-right: 20px;
+        font-size: 42px;
+        color: $DarkCyan;
+    }
+     small{
+        font-size: 15px;
+      }
+  }
+  }
+  button{
+    i{
+        margin-right: 10px;
+    }
+  
+    background: $DarkCyan;
+    width: 90%;
+    padding: 15px;
+    border-radius: 10px;
+    color: $White;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    font-weight: bold;
+    margin: -30px 0;
+
+  }
+    button:active{
+        background: $VeryDarkBlue;
+    }
+}
+//Responsive de la carte à partir de 425px
+@media screen and (min-width: 425px){
+    .card{
+        img{
+         
+           height: 300px; 
+        }
+    }
+}
+//Responsive de la carte à partir de 768px
+@media screen and (min-width: 768px){
+    .card{
+        width: 10%;
+
+       display: flex;
+       justify-content: center;
+       background: none;
+
+        
+ .img_desktop{
+    display: block;
+        width:300px;
+        height: auto;
+        border-radius: 10px 0 0 10px ;
+        position: relative;
+  } 
+  .img_mobile{
+            display: none;
+        }   
+  .bloc_text{
+    .perfume_small{
+        font-size: 15px;
+    }
+background: $White;
+margin-left: 0;
+padding: 50px;
+  padding-top: 20px;
+padding-bottom: 20px;
+border-radius: 0px 10px 10px 0 ;
+h1{
+        font-size: 31px;
+       }
+  p{
+        font-size: 18px;
+       }
+  }
+
+       button{
+        margin-bottom: 30px;
+    }
+
+    }
+    
+
+}
+@media screen and (min-width: 1024px){
+
+}
